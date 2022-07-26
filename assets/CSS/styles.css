@@ -20,7 +20,14 @@ nav {
   background-color: lightslategrey;
 
 }
+.footer {
+  background-color: lightslategrey;
+  font-size: 12px;
+}
 
+.about-me, .contact {
+  background-color:#f1f14d;
+}
 main {
   width: 90%;
   margin: 32px auto;
