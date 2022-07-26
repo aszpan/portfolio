@@ -16,8 +16,8 @@ li {
 nav {
 
   text-align:right;
-  border:8px solid var(--lightcoral);
   padding: 5px;
+  background-color: lightslategrey;
 
 }
 
@@ -41,6 +41,7 @@ body {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+h1,
 h2,
 h3,
 h4,
@@ -49,9 +50,22 @@ h6 {
 
 margin-bottom: auto;
 color: var(--darkpurple);
-text-align: center;
+text-align: left;
 font-weight: bolder;
 line-height: 1.1;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+  width:100%;
+  
+  
+}
+
+.top {
+  display: inline;
+  
 }
 
 header,
