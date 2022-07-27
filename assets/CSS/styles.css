@@ -62,6 +62,7 @@ text-align: left;
 font-weight: bolder;
 line-height: 1.8;
 }
+
 img {
   display: block;
   margin-left: auto;
@@ -80,6 +81,11 @@ img {
   color:#c8c8ee;
 }
 
+.project1 {
+  
+  width:55%;
+}
+
 header,
 footer, 
 p {
@@ -91,7 +97,7 @@ p {
 
 
 a {
-  color: var(--darkpurple);
+  color: #c8c8ee;
 }
 
 
