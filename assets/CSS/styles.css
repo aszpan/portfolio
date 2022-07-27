@@ -1,3 +1,5 @@
+
+
 :root {
   --dark: #090000;
   --neon-green: #51e251;
@@ -6,15 +8,18 @@
 }
 
 li {
-
   display: inline;
   list-style-type: none;
   font-size: 20px;
 
 }
 
+/* set content highlight color and background */
+::selection {
+  background-color: var(--neon-green);
+  color: #000000;
+}
 nav {
-
   text-align: right;
   padding: 5px;
   background-color: var(--dark);
@@ -33,21 +38,12 @@ nav {
 
 main {
   width: 90%;
-  margin: 32px auto;
+  margin: 22px auto;
 }
-
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: var(--dark)
 }
-
-/* set content highlight color and background */
-::selection {
-  background-color: var(--neon-green);
-  color: #000000;
-}
-
-
 
 h1,
 h2,
@@ -63,15 +59,19 @@ h6 {
   line-height: 1.8;
 }
 
+#worksection {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+}
+
+
 #banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-
-
 }
-
 .top {
   display: inline;
 
@@ -81,12 +81,38 @@ h6 {
   color: #c8c8ee;
 }
 
+#mainproject{
+  flex: 1 0 0;
+  padding: 2px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}
+.smallprojects {
+  flex: 1 0 0;
+  justify-content: space-between;
+  padding: 2px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}
+.smallprojects header {
+  padding: 20px;
+  background: #c8c8ee;
+  color: #fff;
+}
+
+.smallprojects img {
+  width: 100%;
+ 
+  
+  
+}
+
 #project1 {
   border-radius: 8px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  margin:auto;
+  width: 180%;
 }
 
 header,
@@ -103,25 +129,17 @@ a {
   color: #c8c8ee;
 }
 
-
-code {
-  /* Monospace makes it look more like code */
-  font-family: monospace;
-}
-
-
-
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
 
   /* on tablets, set columns to only be 50% of the width and not grow */
-  .card-column {
+  .smallprojects {
     flex: 0 0 50%;
     max-width: 50%;
   }
 
   /* select the last child to grow to full width if it has space to grow */
-  .card-column:last-child {
+  .smallprojects:last-child {
     flex-grow: 1;
   }
 }
@@ -132,7 +150,7 @@ code {
     width: 75%;
   }
 
-  .card-column {
+  .smallprojects {
     flex: 0 0 33.333%;
     max-width: 33.333%;
   }
