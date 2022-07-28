@@ -1,49 +1,54 @@
-
-
 :root {
-  --dark: #090000;
+  --bgColor: #f5f1f1;
   --neon-green: #51e251;
   --lightcoral: #f08080;
   --darkpurple: #953fa4;
 }
 
-li {
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: var(--bgColor);
+}
+
+.top {
   display: inline;
-  list-style-type: none;
-  font-size: 20px;
-
-}
-
-/* set content highlight color and background */
-::selection {
-  background-color: var(--neon-green);
-  color: #000000;
-}
-nav {
-  text-align: right;
-  padding: 5px;
-  background-color: var(--dark);
-
-}
-
-.footer {
-  background-color: lightslategrey;
-  font-size: 12px;
-}
-
-.about-me,
-.contact {
-  background-color: #c8c8ee;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 12px;
+  color: var(--darkpurple);
 }
 
 main {
   width: 90%;
   margin: 22px auto;
 }
-body {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: var(--dark)
+
+nav {
+  text-align: right;
+  padding: 5px;
+  background-color: var(--bgColor);
 }
+
+li {
+  display: inline;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+
+.about-me,
+.contact {
+  background-color: #c8c8ee;
+}
+
+
+
+.footer {
+  background-color: rgb(116, 153, 191);
+  font-size: 12px;
+}
+
 
 h1,
 h2,
@@ -51,7 +56,6 @@ h3,
 h4,
 h5,
 h6 {
-
   margin-bottom: auto;
   color: var(--darkpurple);
   text-align: left;
@@ -59,63 +63,62 @@ h6 {
   line-height: 1.8;
 }
 
-#worksection {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 2%;
-}
-
-
 #banner {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-}
-.top {
-  display: inline;
-
+  width: 90%;
 }
 
-.project {
-  color: #c8c8ee;
-}
-
-#mainproject{
+/* #mainproject {
   flex: 1 0 0;
   padding: 2px;
   text-align: center;
   border-style: solid;
   border-width: 1px;
+} */
+
+.worksection {
+  border: solid 4px yellow;
+  padding: 25px;
 }
-.smallprojects {
-  flex: 1 0 0;
-  justify-content: space-between;
-  padding: 2px;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
-}
-.smallprojects header {
-  padding: 20px;
-  background: #c8c8ee;
-  color: #fff;
+.container {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(3, 1fr); 
+  gap: 2px 3px; 
+  align-content: space-around;
+  grid-template-areas: 
+    "Project1 Project1"
+    "Project2 Project3"
+    "Project4 Project5"; 
+    width: 96%;
 }
 
-.smallprojects img {
-  width: 100%;
- 
+.container img {
+  max-width: 100%;
+  max-height: 100%;
+  border: solid 4px purple; 
+}
+.Project1 { 
+  grid-area: Project1;
+  grid-column-start: 1;
+  grid-column-end: 2;
   
-  
+}
+.Project2 { 
+  grid-area: Project2; 
+}
+.Project3 { 
+  grid-area: Project3; 
+}
+.Project4 { 
+  grid-area: Project4; 
+}
+.Project5 { 
+  grid-area: Project5; 
 }
 
-#project1 {
-  border-radius: 8px;
-  margin:auto;
-  width: 180%;
-}
-
-header,
 footer,
 p {
   text-align: center;
@@ -124,14 +127,17 @@ p {
   color: var(--darkpurple);
 }
 
-
 a {
   color: #c8c8ee;
 }
 
+/* set content highlight color and background */
+::selection {
+  background-color: var(--neon-green);
+  color: #000000;
+}
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
-
   /* on tablets, set columns to only be 50% of the width and not grow */
   .smallprojects {
     flex: 0 0 50%;
@@ -155,3 +161,42 @@ a {
     max-width: 33.333%;
   }
 }
+
+/*
+#worksection {
+  /*display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 2%; 
+ 
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  
+  border: solid 2px yellow;
+}
+
+#worksection .smallprojects a img {
+/*width property for images 
+width: 195%;
+
+}
+.smallprojects {
+  /* display: flex; */
+  /* flex: 1 0 0; */
+  /* justify-content: space-between; 
+  padding: 2px;
+  border: solid 2px pink
+}
+
+.smallprojects h3 {
+  padding: 20px;
+  background: #c8c8ee;
+  color: #fff;
+}
+
+.smallprojects img {
+  width: 100%;
+}
+*/
