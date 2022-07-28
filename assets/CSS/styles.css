@@ -28,6 +28,7 @@ nav {
   text-align: right;
   padding: 5px;
   background-color: var(--bgColor);
+  width: 90%;
 }
 
 li {
@@ -78,16 +79,18 @@ h6 {
   border-width: 1px;
 } */
 
+div {
+  display: flex;
+}
 .worksection {
   border: solid 4px yellow;
-  padding: 25px;
+  padding: 5px;
 }
 .container {
   display: grid; 
   grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: repeat(3, 1fr); 
-  gap: 2px 3px; 
-  align-content: space-around;
+  gap: 5px 8px; 
   grid-template-areas: 
     "Project1 Project1"
     "Project2 Project3"
@@ -95,10 +98,15 @@ h6 {
     width: 96%;
 }
 
+.container .bigimage {
+  max-width: 200%;
+
+}
+
 .container img {
   max-width: 100%;
   max-height: 100%;
-  border: solid 4px purple; 
+  border: dashed 2px purple; 
 }
 .Project1 { 
   grid-area: Project1;
@@ -108,12 +116,18 @@ h6 {
 }
 .Project2 { 
   grid-area: Project2; 
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 .Project3 { 
   grid-area: Project3; 
+  
 }
 .Project4 { 
   grid-area: Project4; 
+ 
 }
 .Project5 { 
   grid-area: Project5; 
