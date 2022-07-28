@@ -41,6 +41,8 @@ li {
 .about-me,
 .contact {
   background-color: #c8c8ee;
+  border: dashed 8px #7575ed;
+
 }
 
 
@@ -82,8 +84,17 @@ h6 {
 div {
   display: flex;
 }
+
+div p {
+  position: absolute;
+  height: 3%;
+  font-size: 20px;
+  background-color: #d3d3d3;
+  border: double 5px #800080; 
+  
+}
 .worksection {
-  border: solid 4px yellow;
+  border: solid 4px #800080;
   padding: 5px;
 }
 .container {
@@ -95,23 +106,31 @@ div {
     "Project1 Project1"
     "Project2 Project3"
     "Project4 Project5"; 
-    width: 96%;
+  width: 96%;
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 25px;
 }
 
 .container .bigimage {
   max-width: 200%;
+  box-shadow: 0 4px 8px 0 #57189f33, 0 6px 20px 0 #7a616130;
 
 }
 
 .container img {
   max-width: 100%;
   max-height: 100%;
-  border: dashed 2px purple; 
+  border: dashed 5px #800080;
 }
+
+
+
 .Project1 { 
   grid-area: Project1;
   grid-column-start: 1;
   grid-column-end: 2;
+  
   
 }
 .Project2 { 
@@ -120,17 +139,21 @@ div {
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
+  
 }
 .Project3 { 
   grid-area: Project3; 
+
   
 }
 .Project4 { 
   grid-area: Project4; 
  
+ 
 }
 .Project5 { 
   grid-area: Project5; 
+
 }
 
 footer,
@@ -153,15 +176,10 @@ a {
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
   /* on tablets, set columns to only be 50% of the width and not grow */
-  .smallprojects {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
+  
 
   /* select the last child to grow to full width if it has space to grow */
-  .smallprojects:last-child {
-    flex-grow: 1;
-  }
+ 
 }
 
 /* media query for larger screens */
@@ -170,10 +188,7 @@ a {
     width: 75%;
   }
 
-  .smallprojects {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
+  
 }
 
 /*
