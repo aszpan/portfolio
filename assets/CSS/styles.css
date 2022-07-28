@@ -73,13 +73,6 @@ h6 {
   width: 90%;
 }
 
-/* #mainproject {
-  flex: 1 0 0;
-  padding: 2px;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
-} */
 
 div {
   display: flex;
@@ -101,7 +94,7 @@ div p {
   display: grid; 
   grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: repeat(3, 1fr); 
-  gap: 5px 8px; 
+  gap: 5px 22px; 
   grid-template-areas: 
     "Project1 Project1"
     "Project2 Project3"
@@ -113,7 +106,7 @@ div p {
 }
 
 .container .bigimage {
-  max-width: 200%;
+  min-width: 205%;
   box-shadow: 0 4px 8px 0 #57189f33, 0 6px 20px 0 #7a616130;
 
 }
