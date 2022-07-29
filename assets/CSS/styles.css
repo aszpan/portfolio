@@ -42,6 +42,8 @@ li {
 .contact {
   background-color: #c8c8ee;
   border: dashed 8px #7575ed;
+  text-align: right;
+  color:#00008b;
 
 }
 
@@ -158,7 +160,7 @@ p {
 }
 
 a {
-  color: #c8c8ee;
+  color: #27056b;
 }
 
 /* set content highlight color and background */
