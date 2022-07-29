@@ -1,6 +1,7 @@
 # Portfolio
 
 Visit my portfolio here: https://aszpan.github.io/portfolio/
+[Named Link](https://aszpan.github.io/portfolio/ "My Portfolio")
 
 ## Purpose:
 
