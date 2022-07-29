@@ -1,3 +1,5 @@
+/* :root portion stores variables for reusability purposes. It makes it easier to change things 
+like colors instead of hunting them down and changing them one by one */
 :root {
   --bgColor: #f5f1f1;
   --neon-green: #51e251;
@@ -5,11 +7,14 @@
   --darkpurple: #953fa4;
 }
 
+/* this is an example of an element selector, and applies to all of the body (unless there is code further down
+in the sheet that specifies a change */
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: var(--bgColor);
 }
 
+/* Refers to the "top" class, which I have applied in my header section */
 .top {
   display: inline;
   width: 90%;
@@ -19,11 +24,13 @@ body {
   color: var(--darkpurple);
 }
 
+/* another element selector */
 main {
   width: 90%;
   margin: 22px auto;
 }
 
+/* element selector that applies to my navigation links */
 nav {
   text-align: right;
   padding: 5px;
@@ -37,30 +44,25 @@ li {
   font-size: 20px;
 }
 
-
+/* two classes that I wanted to use the same style for*/
 .about-me,
 .contact {
   background-color: #c8c8ee;
   border: dashed 8px #7575ed;
   text-align: center;
   color:#00008b;
-
 }
 
-
-
+/* styling for the background color and font size of footer*/
 .footer {
   background-color: #7499bf;
   font-size: 12px;
 }
 
-
+/* you can stack multiple element selectors if you want them all to have the same style */
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2
+ {
   margin-bottom: auto;
   color: var(--darkpurple);
   text-align: left;
@@ -68,6 +70,8 @@ h6 {
   line-height: 1.8;
 }
 
+/* an ID that is applied to the photo near the top of the page with my photo
+setting the right and left margin to auto allows it to be centered*/
 #banner {
   display: block;
   margin-left: auto;
@@ -76,6 +80,10 @@ h6 {
 }
 
 
+/* the rest of the code down to the footer element selector is where I have trouble
+- we have the container displayed as flex
+it seems to work except for the evil div p element which doesn't behave properly with smaller screen sizes
+it's not the worst, but it's not the best. 4/10, could work better*/
 .container div {
   display: flex;
 }
@@ -110,19 +118,15 @@ div p {
 .container .bigimage {
   width: 100%;
   height:100%;
-  
   box-shadow: 0 8px 8px 0 #57189f33, 0 16px 20px 0 #7a616130;
 
 }
-
 .container img {
   width:90%;
   height:90%;
   border: dashed 5px #800080;
   box-shadow: 0 4px 8px 0 #57189f33, 0 6px 20px 0 #7a616130;
 }
-
-
 
 .Project1 { 
   grid-area: Project1;
